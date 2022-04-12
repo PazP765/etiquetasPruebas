@@ -1,0 +1,27 @@
+@media print {
+
+    /* Se aplicarÃ¡ la siguiente regla CSS */
+    button,
+    [type="button"],
+    [type="submit"],
+    [type="reset"] {
+        display: none;
+    }
+
+}
+@media print and (orientation: portrait) {
+   
+    .orient{
+        transform: rotate(270deg);
+    }
+    /* Reglas para imprimir en formato vertical */
+}
+
+@media print and (orientation: landscape) {
+
+   
+    /* Reglas para imprimir en formato apaisado */
+    .orient {
+        transform: rotate(0deg);
+    }
+}
