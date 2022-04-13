@@ -5,7 +5,7 @@
 
     <script src="main.js"></script>
     <link rel="stylesheet" href="style2.css">
-    <title>PRODUCTO TERMINADO DE TARIMA</title>
+    <title>PRODUCTO TERMINADO DE EXTRUSIÓN</title>
     <script src="jquery.js"></script>
     <script src="jquery.PrintArea.js"></script>
 </head>
@@ -14,23 +14,22 @@
     <!--inicio div-->
     <div id="tarjet" class="printableArea">
         <!--aqui va la tabla-->
-        <table  border=1
-            style="border-collapse: collapse; font-family: 'Verdana', monospace; font-size: 12px;">
+        <table border=1 style="border-collapse: collapse; font-family: 'Verdana', monospace; font-size: 12px;">
 
             <tr>
 
-                <td colspan=2><img src="logo_b.png" width="100%"  alt="" /></td>
+                <td colspan=2><img src="logo_b.png" width="100%" alt="" /></td>
 
-                <td colspan=2><span style="font-size: 8.5px" >PRODUCTO&nbsp;TERMINADO&nbsp;EXTRUSIÓN</span></td>
+                <td colspan=2><span style="font-size: 8.5px">PRODUCTO&nbsp;TERMINADO&nbsp;EXTRUSIÓN</span></td>
 
             </tr>
 
             <tr>
 
-            <td width="15%" colspan=1><b>Código: </b> </td>
-            <td width="15%" colspan=1><label id="code24"></label></td>
-            <td width="35%" colspan=1><span style="font-size: 11px"><b>Orden: </b></span> </td>
-            <td width="35%" colspan=1><label id="orden24"></label></td>
+                <td width="15%" colspan=1><b>Código: </b> </td>
+                <td width="15%" colspan=1><label id="code24"></label></td>
+                <td width="35%" colspan=1><span style="font-size: 11px"><b>Orden: </b></span> </td>
+                <td width="35%" colspan=1><label id="orden24"></label></td>
 
             </tr>
             <tr>
@@ -47,9 +46,9 @@
             </tr>
             <tr>
 
-                <td  colspan=1><b>ANCHO:</b></td>
+                <td colspan=1><b>ANCHO:</b></td>
                 <td colspan=1><label id="ancho24"></label> cm</td>
-                <td  colspan=1><b>Turno:</b></td>
+                <td colspan=1><b>Turno:</b></td>
                 <td colspan=1><label id="turno24"></label></td>
 
             </tr>
@@ -66,7 +65,7 @@
                 <td colspan=1><b><span style="font-size: 12px">Diametro:</span></b></td>
                 <td colspan=1><label id="diametro24"></label> cm</td>
                 <td colspan=2 rowspan="5">
-                <center><img alt="Código QR" id="codigo"></center>
+                    <center><img alt="Código QR" id="codigo"></center>
                 </td>
 
             </tr>
@@ -101,12 +100,13 @@
                 <td colspan=2><span style="font-size: 8px"><b>Fecha: 16 MAR 2021</b></span></td>
 
             </tr>
-            </table>
-<input type="button" value="Imprimir" class="printbutton">
-            <!--aqui termina la tabla-->
+        </table>
+        
+        <!--aqui termina la tabla-->
     </div>
+    <input type="button" value="Imprimir" class="printbutton">
     <!--fin div-->
-   <!--   papa-->
+    <!--   papa-->
 
     <script>
         new QRious({

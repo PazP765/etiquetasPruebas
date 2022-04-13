@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style4.css">
+    <title>PRODUCTO TERMINADO DE TARIMA</title>
+    <script src="jquery.js"></script>
+    <script src="jquery.PrintArea.js"></script>
+</head>
+
+<body>
+
+    <!--inicio div-->
+    <div id="tarjet" class="printableArea">
+    <table width="6.5cm" border=1 style="border-collapse: collapse; font-family: 'Verdana', monospace; font-size: 12px;">
+    
+        <tr>
+    
+            <td colspan=2><img src="logo_b.png" width="100%" alt="" /></td>
+    
+            <td colspan=2><span style="font-size: 8.5px">PRODUCTO&nbsp;TERMINADO&nbsp;TARIMA</span></td>
+    
+        </tr>
+    
+        <tr>
+    
+            <td width="15%"  colspan=1><b>Código: </b> </td>
+            <td width="15%"  colspan=1><label id="codeT"></label></td>
+            <td width="35%" colspan=1><span style="font-size: 11px"><b>Orden: </b></span> </td>
+            <td width="35%" colspan=1><label id="ordenT"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td height="47" colspan=1><b>Producto:</b></td>
+    
+            <td colspan=3><label id="productofinalT"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td height="34" colspan=1><b>Operador:</b></td>
+            <td colspan=3><label id="operadorT"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td height="26" colspan=1><b>ÁREA:</b></td>
+            <td colspan=1><label id="etapaT"></label></td>
+            <td colspan=2 rowspan="6">
+                <center><img alt="Código QR" id="codigo"></center>
+            </td>
+        </tr>
+        <tr>
+    
+            <td height="24" colspan=1><b>Turno:</b></td>
+            <td colspan=1><label id="turnoT"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td colspan=1><span style="font-size: 12px"><b>Peso Bruto:</b></span></td>
+            <td colspan=1><label id="pesob2"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td colspan=1><span style="font-size: 12px"><b>Peso Neto:</b></span></td>
+            <td colspan=1><label id="pesoN"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td colspan=1><span style="font-size: 12px"><b>Peso de Tarima:</b></span></td>
+            <td colspan=1><label id="pesot2"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td colspan=1><span style="font-size: 11px"><b><label id="unidadAT"></label></b></span></td>
+            <td colspan=1><label id="cantidadAT"></label></td>
+    
+        </tr>
+        <tr>
+    
+            <td colspan=1><span style="font-size: 8px"><b>PRO - FIR - 21</b></span></td>
+            <td colspan=1><span style="font-size: 8px"><b>Revisión: 02</b></span></td>
+            <td colspan=2><span style="font-size: 8px"><b>Fecha 14 ABR 20</b></span></td>
+    
+        
+    
+    
+    
+    </table>
+
+    <!--fin tabla-->
+    </div>
+    <!--fin div-->
+    <input type="button" value="Imprimir" class="printbutton">
+    <!--   papa-->
+
+    <script>
+        new QRious({
+            element: document.querySelector("#codigo"),
+            value: "abcde",
+            size: 150,
+            backgroundAlpha: 0,
+            foreground: "black",
+            level: "H",
+        });
+    </script>
+</body>
+
+
+<script>
+    document.querySelectorAll('.printbutton').forEach(function (element) {
+        element.addEventListener('click', function () {
+            document.close();
+            print();
+            close();
+        });
+    });
+</script>
+
+
+
+</html>

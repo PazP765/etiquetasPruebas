@@ -6,7 +6,27 @@ div {
   margin-left: 0cm !important;
   margin-right: 3cm;
 }
-  
+.printbutton {
+  margin-left: 7.5cm;
+  margin-top: 7cm;
+  background-color: rgb(1, 142, 177);
+  border-radius: 10px;
+  border: rgb(247, 130, 130);
+  width: 60PX;
+  height: 40PX;
+
+}
+
+.printbutton:hover {
+  margin-left: 7.5cm;
+  margin-top: 7cm;
+  background-color: rgb(1, 142, 177);
+  border-radius: 10px;
+  border: rgb(247, 130, 130);
+  width: 60PX;
+  height: 40PX;
+
+}
   .content-box {
     box-sizing: content-box;
    
@@ -55,6 +75,8 @@ div {
    
     @media print and (orientation: portrait) {
       div{
+        margin-top: .8cm;
+        margin-left: .3;
         transform: scale(0.9);
       }
      

@@ -4,22 +4,23 @@ table{
   font-family:'Helvetica';
  font-size: 15px;
 }
-.printbutton{
-  margin-left: 7cm;
-  margin-top: 7.5cm;
-  background-color: cadetblue;
-  border-radius: 20px;
-  border:cadetblue ;
+.printbutton {
+  margin-left: 7.3cm;
+  margin-top: 7cm;
+  background-color: rgb(1, 142, 177);
+  border-radius: 10px;
+  border: rgb(247, 130, 130);
   width: 60PX;
   height: 40PX;
 
 }
+
 .printbutton:hover {
-  margin-left: 7cm;
-  margin-top: 7.5cm;
-  background-color: rgb(11, 248, 217);
-  border-radius: 20px;
-  border: rgb(11, 248, 217);
+  margin-left: 7.3cm;
+  margin-top: 7cm;
+  background-color: rgb(1, 142, 177);
+  border-radius: 10px;
+  border: rgb(247, 130, 130);
   width: 60PX;
   height: 40PX;
 
