@@ -1,0 +1,67 @@
+table{
+  align-items: left;
+  text-align: left;
+  font-family:'Helvetica';
+ font-size: 15px;
+}
+  div {
+    
+    width: 7.62cm;
+    height: 9.4cm;
+    padding-left: 0cm;
+    padding-right: 0cm;
+    padding-top: 0cm;
+    padding-bottom: 0cm;
+    border-radius: .2cm;
+    background: rgb(255, 253, 253);
+  }
+
+  .content-box {
+    box-sizing: content-box;
+   
+  }
+  
+  .border-box {
+    box-sizing: border-box;
+   
+  }
+
+  /*fuentes texto*/
+.textStile1{
+  font-family:'Helvetica';
+   font-size: 13px;
+}
+.textStile2_pie{
+  font-family:'Helvetica';
+ font-size: 9px;
+}
+.text_pieza{
+  font-family:'Helvetica';
+ font-size: 8px;
+}
+
+
+  /*fuentes texto*/
+
+  /* Cuando el dispositivo de salida sea una impresora */
+@media print {
+
+  /* Se aplicará la siguiente regla CSS */
+  button,
+  [type="button"],
+  [type="submit"],
+  [type="reset"] {
+    display: none;
+  }
+
+}
+@page 
+    {
+        size:  auto;   /* auto es el valor inicial */
+        margin: 0mm;  /* afecta el margen en la configuración de impresión */
+    }
+    @page {size: portrait;}
+
+    .printbutton{
+      margin-top: 4cm;
+    }

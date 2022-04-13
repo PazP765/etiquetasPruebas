@@ -2,117 +2,122 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="main.js"></script>
- <link rel="stylesheet" href="reglasIMP.css">
-  <title>PRODUCTO TERMINADO EXTRUSIÓN</title>
-  <script src="jquery.js"></script>
-  <script src="jquery.PrintArea.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+	<title>PRODUCTO TERMINADO DE TARIMA</title>
+    <script src="jquery.js"></script>
+<script src="jquery.PrintArea.js"></script>
 </head>
 
 <body>
-
-  <div  id="tarjet" class="printableArea">
+    <!--inicio div-->
+    <div id="tarjet" class="printableArea">
     <table class="orient" width="10%" cellspacing="11" border=1
       style="border-collapse: collapse; font-family: 'Verdana', monospace; font-size: 12px;">
-
-      <tr>
-
+    <tr>
+    
         <td colspan=2><img src="logo_b.png" width="153" height="35" alt="" /></td>
-
+    
         <td colspan=2><span style="font-size: 8.5px">PRODUCTO&nbsp;TERMINADO BOBINA/BOLSA PIEZA</span></td>
-
-      </tr>
-
-      <tr>
-
+    
+    </tr>
+    
+    <tr>
+    
         <td width="69" colspan=1><b>Código: </b> </td>
         <td width="79" colspan=1><label id="code23"></label></td>
         <td width="65" colspan=1><b>Orden: </b> </td>
         <td width="67" colspan=1><label id="orden23"></label></td>
-
-      </tr>
-      <tr>
-
+    
+    </tr>
+    <tr>
+    
         <td height="47" colspan=1><b>Producto:</b></td>
-
+    
         <td colspan=3><label id="producto23"></label></td>
-
-      </tr>
-      <tr>
-
+    
+    </tr>
+    <tr>
+    
         <td colspan=1><b>Máquina:</b></td>
         <td colspan=3><label id="">VISION</label></td>
-
-      </tr>
-      <tr>
-
+    
+    </tr>
+    <tr>
+    
         <td colspan=1><b>Turno:</b></td>
         <td colspan=3><label id="turno23"></label></td>
-
-      </tr>
-      <tr>
-
+    
+    </tr>
+    <tr>
+    
         <td colspan=1><b>Operador:</b></td>
         <td colspan=3><label id="operador23"></label></td>
-
-      </tr>
-      <tr>
-
+    
+    </tr>
+    <tr>
+    
         <td colspan=1><span style="font-size: 12px"><b><label id="unidad23"></label></b></span></td>
         <td colspan=1><b><label id="cantidadA23"></label></b></td>
         <td colspan=1><span style="font-size: 12px"><b>Diametro (CM):</b></span></td>
         <td colspan=1></td>
-
-      </tr>
-      <tr>
-
-
+    
+    </tr>
+    <tr>
+    
+    
         <td colspan=4>
-          <center><img alt="Código QR" id="codigo"></center>
+            <center><img alt="Código QR" id="codigo"></center>
         </td>
-      </tr>
-      <tr>
-
+    </tr>
+    <tr>
+    
         <td colspan=1><span style="font-size: 8px"><b>PRO - FIR - 21</b></span></td>
         <td colspan=1><span style="font-size: 8px"><b>Revisión: 02</b></span></td>
         <td colspan=2><span style="font-size: 8px"><b>Fecha 14 ABR 20</b></span></td>
-
-      </tr>
-
+    
+    </tr>
 
     </table>
-  </div>
+</div><!--fin div-->
 
-  <br>
-  <input type="button" value="Imprimir" class="printbutton">
+  <!--   papa-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<input type="button" value="Imprimir" class="printbutton">
 
 
-  <br>
-
-  <script>
-    new QRious({
-      element: document.querySelector("#codigo"),
-      value: "TR00000015",
-      size: 130,
-      backgroundAlpha: 0,
-      foreground: "black",
-      level: "H",
-    });
-  </script>
+    <br>
+	
+	<script>
+		new QRious({
+			element: document.querySelector("#codigo"),
+			value:"abcde", 
+			size: 150,
+			backgroundAlpha: 0, 
+			foreground: "black", 
+			level: "H", 
+		});
+	</script>
 </body>
 
 
 <script>
-  document.querySelectorAll('.printbutton').forEach(function (element) {
-    element.addEventListener('click', function () {
-      document.close();
-      print();
-      close();
+    document.querySelectorAll('.printbutton').forEach(function (element) {
+        element.addEventListener('click', function () {
+            document.close();
+            print();
+            close();
+        });
     });
-  });
 </script>
 
 

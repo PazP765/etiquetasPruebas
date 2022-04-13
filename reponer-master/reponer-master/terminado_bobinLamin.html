@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+	<title>PRODUCTO TERMINADO EXTRUSIÓN</title>
+    <script src="jquery.js"></script>
+<script src="jquery.PrintArea.js"></script>
+</head>
+
+<body>
+  
+    <div id="tarjet" class="printableArea">
+    <table border="0"  width="100%" cellspacing="11" column-count="10" font_s>
+      
+        <colgroup>
+            <col style="width: 30%"/>
+            <col style="width: 30%"/>
+            <col style="width: 30%"/>
+            <col style="width: 20%"/>
+            
+        </colgroup>
+        <thead>
+            <tr>
+                <th rowspan="1" colspan="2"><img src="logo_b.png" alt=""width="180px" height="60px"></th>
+             
+                <th colspan="2" align="left" class="textStile1" >PRODUCTO TERMINADO EXTRUSION</th>
+            </tr>
+            <tr>
+                <th>Código:</th>
+                <th>99999999999</th>
+                <th>Orden:</th>
+                <th>99999999999</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td align="left" colspan="1" class="textStile2_pie">PRO-FIR-21</td>
+                <td align="center" colspan="2" class="textStile2_pie">REVISION 02</td>
+                <td align="right" colspan="1" class="textStile2_pie">FECHA: 16 MAR 2021</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+        
+                <th>Producto:</th>
+                
+                    <td colspan="3">4000000000001465_PELIC. HB REG GRANADO 500</td>
+               
+            </tr>
+            <tr>
+        
+                <th>Maquina:</th>
+                
+                    <td colspan="3">Laminadora 1</td>
+               
+            </tr>
+            <tr>
+        
+                <th>Operador:</th>
+                
+                    <td colspan="3">Francisco Javier Paz Pacheco</td>
+               
+            </tr>
+            <tr>
+                <th>Turno:</th>
+                <td>azul</td>
+                <th>Peso:</th>
+                <td>110KG</td>
+                
+            </tr>
+            <tr>
+                <th>Hora de laminado:</th>
+                <td>22:00</td>
+                <th>Fecha de curado:</th>
+                <td>23/09/2021</td>
+                
+            </tr>
+          
+            <tr>
+                <th>Hora de curado:</th>
+                <td>22.00</td>
+                <td colspan="2" rowspan="2" align="center">
+                    
+                    <img  alt="Código QR" id="codigo">
+                </td>
+            
+            </tr>
+            <tr>
+                <th>Peso:</th>
+                <td>1540KGM</td>
+                
+            </tr>
+            
+        </tr>
+       
+        
+    </tr>
+   
+        </tbody>
+    </table>
+</div>
+
+<br>
+<input  type="button" value="Imprimir" class="printbutton">
+
+
+    <br>
+	
+	<script>
+		new QRious({
+			element: document.querySelector("#codigo"),
+			value:"TR00000015", 
+			size: 130,
+			backgroundAlpha: 0, 
+			foreground: "black", 
+			level: "H", 
+		});
+	</script>
+</body>
+
+
+<script>
+    document.querySelectorAll('.printbutton').forEach(function (element) {
+        element.addEventListener('click', function () {
+            document.close();
+            print();
+            close();
+        });
+    });
+</script>
+
+
+
+</html>

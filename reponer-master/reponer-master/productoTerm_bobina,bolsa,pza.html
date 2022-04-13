@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+	<title>PRODUCTO TERMINADO extrusion</title>
+    <script src="jquery.js"></script>
+<script src="jquery.PrintArea.js"></script>
+</head>
+
+<body>
+    <!--inicio div-->
+    <div id="tarjet" class="printableArea">
+    <table border="0"  width="100%" cellspacing="9" column-count="10" font_s>
+      
+        <colgroup>
+            <col style="width: 30%"/>
+            <col style="width: 30%"/>
+            <col style="width: 30%"/>
+            <col style="width: 30%"/>
+            
+        </colgroup>
+        <thead>
+            <tr>
+                <th rowspan="1" colspan="2"><img src="logo_b.png" alt=""width="180px" height="60px"></th>
+             
+                <th colspan="2" align="left" class="textStile1" >PRODUCTO TERMINADO BOBINA/BOLSA PIEZA</th>
+            </tr>
+            <tr>
+                <th>Código:</th>
+                <th>99999999999</th>
+                <th>Orden:</th>
+                <th>99999999999</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td align="left" colspan="1" class="textStile2_pie">PRO-FIR-21</td>
+                <td align="center" colspan="2" class="textStile2_pie">REVISION 02</td>
+                <td align="right" colspan="1" class="textStile2_pie">FECHA: 16 MAR 2021</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+        
+                <th>Producto:</th>
+                
+                    <td colspan="3">NUTRIBITS ENSALADA TOMATE CHERRY 23X30</td>
+               
+            </tr>
+            <tr>
+        
+                <th>Operador:</th>
+                
+                    <td colspan="3">Roberto Rios Becerra</td>
+               
+            </tr>
+            <tr>
+                <th>Máquina:</th>
+                <td>BOBST 1</td>
+                <th>Turno:</th>
+                <td>Azul</td>
+                
+            </tr>
+            <tr>
+                <th>Longitud:</th>
+                <td>10,724.4</td>
+                <th>Diametro:</th>
+                <td>2.32</td>
+                
+           
+          
+            <tr>
+               
+                <td colspan="4" rowspan="1" align="center">                
+                    <img  alt="Código QR" id="codigo">
+                </td>
+            
+           
+            
+            
+        </tr>
+       
+        
+    </tr>
+   
+        </tbody>
+    </table>
+</div><!--fin div-->
+
+
+
+<input  type="button" value="Imprimir" class="printbutton">
+
+
+    <br>
+	
+	<script>
+		new QRious({
+			element: document.querySelector("#codigo"),
+			value:"abcde", 
+			size: 240,
+			backgroundAlpha: 0, 
+			foreground: "black", 
+			level: "H", 
+		});
+	</script>
+</body>
+
+
+<script>
+    document.querySelectorAll('.printbutton').forEach(function (element) {
+        element.addEventListener('click', function () {
+            document.close();
+            print();
+            close();
+        });
+    });
+</script>
+
+
+
+</html>
