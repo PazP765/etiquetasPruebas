@@ -1,35 +1,10 @@
-table{
-  align-items: left;
-  text-align: left;
-  font-family:'Helvetica';
- font-size: 15px;
-}
-.printbutton{
-  margin-left: 7cm;
-  margin-top: 7.5cm;
-  background-color: cadetblue;
-  border-radius: 20px;
-  border:cadetblue ;
-  width: 60PX;
-  height: 40PX;
 
-}
-.printbutton:hover {
-  margin-left: 7cm;
-  margin-top: 7.5cm;
-  background-color: rgb(11, 248, 217);
-  border-radius: 20px;
-  border: rgb(11, 248, 217);
-  width: 60PX;
-  height: 40PX;
-
-}
 div {
   width: 1cm !important;
   height: 1cm !important;
   margin-bottom: 0cm !important;
   margin-left: 0cm !important;
-  margin-right: 0cm !important;
+  margin-right: 3cm;
 }
   
   .content-box {
@@ -79,15 +54,10 @@ div {
     }
    
     @media print and (orientation: portrait) {
-      
-      div {
-        
-      width: 1cm !important;
-      height: 1cm !important;
-      margin-bottom: 0cm !important;
-      margin-left: 0cm !important;
-      margin-right: 0cm !important;
+      div{
+        transform: scale(0.9);
       }
+     
     }
    
     
@@ -96,11 +66,12 @@ div {
       
       div {
       transform: rotate(270deg);
-      margin-top:60%;
-      padding-bottom: .3cm;
-      padding-right: .5cm;
+      margin-top:63%;
+  margin-left: .5cm;
       }
       /*
+      padding-bottom: .3cm;
+      padding-right: .5cm;
       transform: rotate(270deg);
       margin-left: .5cm;
       margin-top: .5cm;

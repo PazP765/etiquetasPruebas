@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <title>PRODUCTO TERMINADO DE TARIMA</title>
+    <script src="jquery.js"></script>
+    <script src="jquery.PrintArea.js"></script>
+</head>
+
+<body>
+    <!--inicio div-->
+    <div id="tarjet" class="printableArea">
+        <!--aqui va la tabla-->
+        <table  border=1
+            style="border-collapse: collapse; font-family: 'Verdana', monospace; font-size: 12px;">
+
+            <tr>
+
+                <td colspan=2><img src="logo_b.png" width="100%"  alt="" /></td>
+
+                <td colspan=2><span style="font-size: 8.5px" >PRODUCTO&nbsp;TERMINADO&nbsp;EXTRUSIÓN</span></td>
+
+            </tr>
+
+            <tr>
+
+            <td width="15%" colspan=1><b>Código: </b> </td>
+            <td width="15%" colspan=1><label id="code24"></label></td>
+            <td width="35%" colspan=1><span style="font-size: 11px"><b>Orden: </b></span> </td>
+            <td width="35%" colspan=1><label id="orden24"></label></td>
+
+            </tr>
+            <tr>
+
+                <td height="47" colspan=1><b>Producto:</b></td>
+
+                <td colspan=3><label id="producto24"></label></td>
+
+            </tr>
+            <tr>
+                <td colspan=1><b>Operador:</b></td>
+                <td colspan=3><label id="operador24"></label></td>
+
+            </tr>
+            <tr>
+
+                <td  colspan=1><b>ANCHO:</b></td>
+                <td colspan=1><label id="ancho24"></label> cm</td>
+                <td  colspan=1><b>Turno:</b></td>
+                <td colspan=1><label id="turno24"></label></td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><span style="font-size: 12px"><b>Calibre:</b></span></td>
+                <td colspan=1><label id="calibre24"></label> micras</td>
+                <td colspan=1><span style="font-size: 12px"><b>Fórmula:</b></span></td>
+                <td colspan=1><label id="formula24"></label></td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><b><span style="font-size: 12px">Diametro:</span></b></td>
+                <td colspan=1><label id="diametro24"></label> cm</td>
+                <td colspan=2 rowspan="5">
+                <center><img alt="Código QR" id="codigo"></center>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><span style="font-size: 12px"><b>Peso:</b></span></td>
+                <td colspan=1><label id="cantidadA24">300000</label><b><label id="unidad24"></label></b></td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><span style="font-size: 10px"><b>Tratado de Bobina:</b></span></td>
+                <td colspan=1><label id="tratado24"></label></td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><span style="font-size: 12px"><b>Color de Bobina:</b></span></td>
+                <td colspan=1><label id="colorbobina24"></label></td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><span style="font-size: 12px"><b>Tipo de Bobina:</b></span></td>
+                <td colspan=1><label id="tipobobina24"></label></td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><span style="font-size: 8px"><b>PRO - FIR - 22</b></span></td>
+                <td colspan=1><span style="font-size: 8px"><b>Revisión: 02</b></span></td>
+                <td colspan=2><span style="font-size: 8px"><b>Fecha: 16 MAR 2021</b></span></td>
+
+            </tr>
+            </table>
+<input type="button" value="Imprimir" class="printbutton">
+            <!--aqui termina la tabla-->
+    </div>
+    <!--fin div-->
+   <!--   papa-->
+
+    <script>
+        new QRious({
+            element: document.querySelector("#codigo"),
+            value: "abcde",
+            size: 150,
+            backgroundAlpha: 0,
+            foreground: "black",
+            level: "H",
+        });
+    </script>
+</body>
+
+
+<script>
+    document.querySelectorAll('.printbutton').forEach(function (element) {
+        element.addEventListener('click', function () {
+            document.close();
+            print();
+            close();
+        });
+    });
+</script>
+
+
+
+</html>
