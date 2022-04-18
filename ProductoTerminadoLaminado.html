@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style3.css">
+    <title>PRODUCTO TERMINADO DE TARIMA</title>
+    <script src="jquery.js"></script>
+    <script src="jquery.PrintArea.js"></script>
+</head>
+
+<body>
+    <!--inicio div-->
+    <div id="tarjet" class="printableArea">
+
+        <!-- ETIQUETA DE LAMINADO -->
+
+        <table width="6.5cm" min-width="12px" border=1 style="border-collapse: collapse; font-family: 'Verdana', monospace; font-size: 12px;">
+
+            <tr>
+
+                <td colspan=2><img src="logo_b.png" width="100%" alt="" /></td>
+
+                <td colspan=2><span style="font-size: 8.5px">PRODUCTO&nbsp;TERMINADO&nbsp;BOBINA LAMINADA</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td width="15%" height="28" colspan=1><b>Código: </b> </td>
+                <td width="15%" colspan=1><label id="code25"></label></td>
+                <td width="35%" colspan=1><span style="font-size: 11px"><b>Orden:</b></span></td>
+                <td width="35%" colspan=1><label id="orden25"></label></td>
+
+            </tr>
+            <tr>
+
+                <td height="27" colspan=1><b>Producto:</b></td>
+
+                <td colspan=3><label id="producto25"></label></td>
+
+            </tr>
+            <tr>
+                <td height="24" colspan=1><b>Máquina:</b></td>
+                <td colspan=3><label id="maquina25"></label></td>
+
+            </tr>
+            <tr>
+
+                <td  height="22" colspan=1><b>Turno:</b></td>
+                <td colspan=3><label id="turno25"></label></td>
+
+            </tr>
+            <tr>
+
+                <td  height="22" colspan=1 ><span style="font-size: 12px"><b>Operador:</b></span></td>
+                <td colspan=3><label id="operador25"></label></td>
+
+            </tr>
+            <tr>
+
+                <td height="2" colspan=1><span style="font-size: 12px"><b><label id="unidad25"></label></b></span></td>
+                <td colspan=1><label id="cantidadA25"></label></td>
+                <td colspan=2 rowspan="4">
+                    <center><img alt="Código QR" id="codigo"></center>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td height="30" colspan=1><span style="font-size: 12px"><b>Hora de Laminado:</b></span></td>
+                <td colspan=1>22:00</td>
+
+            </tr>
+            <tr>
+
+                <td height="30" colspan=1><b><span style="font-size: 12px">Fecha de Curado:</span></b></td>
+                <td colspan=1>230921</td>
+
+            </tr>
+            <tr>
+
+                <td height="30" colspan=1><b><span style="font-size: 12px">Hora de Curado:</span></b></td>
+                <td colspan=1>22:00</td>
+
+            </tr>
+            <tr>
+
+                <td colspan=1><span style="font-size: 8px"><b>PRO - FIR - 22</b></span></td>
+                <td colspan=1><span style="font-size: 8px"><b>Revisión: 02</b></span></td>
+                <td colspan=2><span style="font-size: 8px"><b>Fecha: 14 ABR 2020</b></span></td>
+
+            
+
+        </table>
+
+    </div>
+    <input type="button" value="Imprimir" class="printbutton">
+    <!--fin div-->
+
+    <!--   papa-->
+
+    <script>
+        new QRious({
+            element: document.querySelector("#codigo"),
+            value: "abcde",
+            size: 150,
+            backgroundAlpha: 0,
+            foreground: "black",
+            level: "H",
+        });
+    </script>
+</body>
+
+
+<script>
+    document.querySelectorAll('.printbutton').forEach(function (element) {
+        element.addEventListener('click', function () {
+            document.close();
+            print();
+            close();
+        });
+    });
+</script>
+
+
+
+</html>
